@@ -16,7 +16,7 @@ namespace OrderByKioskWebAPI
     {
         DataBase db;
         Hashtable hashtable;
-        string serverUrl="http://localhost:5000";
+        string serverUrl="http://192.168.3.232:80";
         
         [Route("Menu/add")]
         [HttpPost]

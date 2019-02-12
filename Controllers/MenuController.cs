@@ -8,6 +8,10 @@ using System.Data.SqlClient;
 using System.IO;
 using MySql.Data.MySqlClient;
 
+
+using System.Net.NetworkInformation;
+using System.Net.Sockets;
+
 namespace OrderByKioskWebAPI
 {
 
@@ -16,14 +20,37 @@ namespace OrderByKioskWebAPI
     {
         DataBase db;
         Hashtable hashtable;
-        string serverUrl="http://192.168.3.232:80";
+        string serverUrl= GetLocalIPv4(NetworkInterfaceType.Ethernet);  //192.168.3.77
+
+        public static string GetLocalIPv4(NetworkInterfaceType _type)
+        {
+            string output = "";
+            foreach (NetworkInterface item in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (item.NetworkInterfaceType == _type && item.OperationalStatus == OperationalStatus.Up)
+                {
+                    foreach (UnicastIPAddressInformation ip in item.GetIPProperties().UnicastAddresses)
+                    {
+                        if (ip.Address.AddressFamily == AddressFamily.InterNetwork)
+                        {
+                            output = ip.Address.ToString();
+                        }
+                    }
+                }
+            }
+            return output;
+        }
         
         [Route("Menu/add")]
         [HttpPost]
         public ActionResult<string> Add([FromForm] string fileName,[FromForm]string fileData,[FromForm] string cNo,[FromForm] string mName,[FromForm] string mPrice,[FromForm] string mImage,[FromForm] string DegreeYn,[FromForm] string SizeYn,[FromForm] string ShotYn,[FromForm] string CreamYn)
         {
-            string path = "/root/OrderByKioskWebAPI/wwwroot";  //System.IO.Directory.GetCurrentDirectory();
+            string path = System.IO.Directory.GetCurrentDirectory();  //System.IO.Directory.GetCurrentDirectory(); // \정인혜팀\OrderKiosk\
             //path += "/root/OrderByKioskWebAPI/wwwroot";
+            path += "//wwwroot";
+
+            System.Console.WriteLine(" ip 테스트 === : {0}",serverUrl);
+            System.Console.WriteLine(" path 테스트 === : {0}",path);
 
             if (!Directory.Exists(path))
             {
@@ -43,7 +70,7 @@ namespace OrderByKioskWebAPI
                 fileStream.Write(data,0,data.Length);
                 fileStream.Close();
 
-                string url = string.Format("{0}/{1}",serverUrl,fullName);
+                string url = fullName;
 
                 hashtable = new Hashtable();
                 hashtable.Add("_cNo",cNo);
@@ -102,7 +129,7 @@ namespace OrderByKioskWebAPI
                     fileStream.Write(data, 0, data.Length);
                     fileStream.Close();
 
-                    url = string.Format("{0}/{1}",serverUrl, fullName);
+                    url = string.Format(fullName);
                 }
                 else
                 {
@@ -268,7 +295,7 @@ namespace OrderByKioskWebAPI
             string list ="";
             while (sdr.Read())
             {
-                list=sdr.GetValue(0).ToString();
+                list= "http://"+ serverUrl + ":5000/" + sdr.GetValue(0).ToString();
             }
             db.ReaderClose(sdr);
             db.Close();

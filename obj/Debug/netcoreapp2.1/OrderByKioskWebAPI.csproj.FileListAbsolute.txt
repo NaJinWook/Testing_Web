@@ -68,3 +68,17 @@ C:/Users/gd7/Downloads/정인혜팀/정인혜팀/OrderByKioskWebAPI/obj/Debug/ne
 /root/Testing_Web/obj/Debug/netcoreapp2.1/OrderByKioskWebAPI.RazorTargetAssemblyInfo.cache
 /root/Testing_Web/obj/Debug/netcoreapp2.1/OrderByKioskWebAPI.dll
 /root/Testing_Web/obj/Debug/netcoreapp2.1/OrderByKioskWebAPI.pdb
+C:\Users\gd7\Desktop\Test_Server\Testing_Web\bin\Debug\netcoreapp2.1\OrderByKioskWebAPI.deps.json
+C:\Users\gd7\Desktop\Test_Server\Testing_Web\bin\Debug\netcoreapp2.1\OrderByKioskWebAPI.runtimeconfig.json
+C:\Users\gd7\Desktop\Test_Server\Testing_Web\bin\Debug\netcoreapp2.1\OrderByKioskWebAPI.runtimeconfig.dev.json
+C:\Users\gd7\Desktop\Test_Server\Testing_Web\bin\Debug\netcoreapp2.1\OrderByKioskWebAPI.dll
+C:\Users\gd7\Desktop\Test_Server\Testing_Web\bin\Debug\netcoreapp2.1\OrderByKioskWebAPI.pdb
+C:\Users\gd7\Desktop\Test_Server\Testing_Web\obj\Debug\netcoreapp2.1\OrderByKioskWebAPI.csprojAssemblyReference.cache
+C:\Users\gd7\Desktop\Test_Server\Testing_Web\obj\Debug\netcoreapp2.1\OrderByKioskWebAPI.csproj.CoreCompileInputs.cache
+C:\Users\gd7\Desktop\Test_Server\Testing_Web\obj\Debug\netcoreapp2.1\OrderByKioskWebAPI.RazorAssemblyInfo.cache
+C:\Users\gd7\Desktop\Test_Server\Testing_Web\obj\Debug\netcoreapp2.1\OrderByKioskWebAPI.RazorAssemblyInfo.cs
+C:\Users\gd7\Desktop\Test_Server\Testing_Web\obj\Debug\netcoreapp2.1\OrderByKioskWebAPI.AssemblyInfoInputs.cache
+C:\Users\gd7\Desktop\Test_Server\Testing_Web\obj\Debug\netcoreapp2.1\OrderByKioskWebAPI.AssemblyInfo.cs
+C:\Users\gd7\Desktop\Test_Server\Testing_Web\obj\Debug\netcoreapp2.1\OrderByKioskWebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\gd7\Desktop\Test_Server\Testing_Web\obj\Debug\netcoreapp2.1\OrderByKioskWebAPI.dll
+C:\Users\gd7\Desktop\Test_Server\Testing_Web\obj\Debug\netcoreapp2.1\OrderByKioskWebAPI.pdb

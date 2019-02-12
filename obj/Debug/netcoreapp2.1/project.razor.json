@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\gd7\\Downloads\\정인혜팀\\정인혜팀\\OrderByKioskWebAPI\\OrderByKioskWebAPI.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  }
+}

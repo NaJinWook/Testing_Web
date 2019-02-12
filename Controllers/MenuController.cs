@@ -106,8 +106,9 @@ namespace OrderByKioskWebAPI
         [HttpPost]
         public ActionResult<string> MenuEdeit([FromForm] string fileName,[FromForm]string fileData,[FromForm] string mName,[FromForm] string NewmName,[FromForm] string mPrice,[FromForm] string DegreeYn,[FromForm] string SizeYn,[FromForm] string ShotYn,[FromForm] string CreamYn)
         {
-            string path = "/root/OrderByKioskWebAPI/wwwroot";	//System.IO.Directory.GetCurrentDirectory();
-           // path += "\\wwwroot";
+            string path = System.IO.Directory.GetCurrentDirectory();	//System.IO.Directory.GetCurrentDirectory();
+            // path += "\\wwwroot";
+            path += "//wwwroot";
 
             if (!Directory.Exists(path))
             {
